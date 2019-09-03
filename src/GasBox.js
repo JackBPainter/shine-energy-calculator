@@ -3,8 +3,8 @@ import CalculateUsedUnits from './CalculateUsedUnits.js';
 
 export default function GasBox() {
     let gasInput = 0;
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
         gasInput = document.getElementById('Gas Meter').value;
     }
         return (
@@ -19,7 +19,7 @@ export default function GasBox() {
                 placeholder = "11000"
             />
             </div>
-            <button type="submit"onSubmit={(e) => handleSubmit(e)}>Calculate gas cost</button>
+            <button type="submit"onSubmit={(event) => handleSubmit(event)}>Calculate gas cost</button>
             <div>
                 <label>Your Gas bill £{<CalculateUsedUnits gasReading={gasInput}/>}</label>
             </div>

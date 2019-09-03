@@ -3,8 +3,8 @@ import CalculateUsedUnits from './CalculateUsedUnits.js';
 
 export default function ElectricityBox() {
     let elecInput = 0;
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
         elecInput = document.getElementById('Electricity Meter').value;
     }
         return (
@@ -19,7 +19,7 @@ export default function ElectricityBox() {
                 placeholder = "11000"
             />
             </div>
-            <button type="submit"onSubmit={(e) => handleSubmit(e)}>Calculate electricity cost</button>
+            <button type="submit"onSubmit={(event) => handleSubmit(event)}>Calculate electricity cost</button>
             <div>
                 <label>Your Electricity bill £{<CalculateUsedUnits elecReading={elecInput}/>}</label>
             </div>
