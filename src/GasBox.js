@@ -21,7 +21,7 @@ export default function GasBox() {
             </div>
             <button type="submit"onSubmit={(e) => handleSubmit(e)}>Calculate gas cost</button>
             <div>
-                <label>Your Gas bill £ {<CalculateUsedUnits gasReading={gasInput}/>}</label>
+                <label>Your Gas bill £{<CalculateUsedUnits gasReading={gasInput}/>}</label>
             </div>
         </form>
         

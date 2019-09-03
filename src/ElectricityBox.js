@@ -21,7 +21,7 @@ export default function ElectricityBox() {
             </div>
             <button type="submit"onSubmit={(e) => handleSubmit(e)}>Calculate electricity cost</button>
             <div>
-                <label>Your Electricity bill £ {<CalculateUsedUnits elecReading={elecInput}/>}</label>
+                <label>Your Electricity bill £{<CalculateUsedUnits elecReading={elecInput}/>}</label>
             </div>
         </form>
         
