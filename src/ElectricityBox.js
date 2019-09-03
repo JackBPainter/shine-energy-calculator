@@ -1,8 +1,12 @@
 import React from 'react';
-import UseElectricityForm from './ElectricityHooks.js';
+import CalculateUsedUnits from './CalculateUsedUnits.js';
 
 export default function ElectricityBox() {
-    const { handleChangeInputs, handleSubmit} = UseElectricityForm();
+    let elecInput = 0;
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        elecInput = document.getElementById('Electricity Meter').value;
+    }
         return (
         <form>
             <div>
@@ -11,13 +15,18 @@ export default function ElectricityBox() {
                 className = ""
                 type = "number"
                 id = "Electricity Meter"
-                min = "100"
+                min = "11000"
                 placeholder = "11000"
-                onChange = {handleChangeInputs}
-                onSubmit = {handleSubmit} />
+            />
             </div>
-            <button type="submit">Calculate electricity cost</button>
+            <button type="submit"onSubmit={(e) => handleSubmit(e)}>Calculate electricity cost</button>
+            <div>
+                <label>Your Electricity bill £ {<CalculateUsedUnits elecReading={elecInput}/>}</label>
+            </div>
         </form>
+        
+            
+        
     );
 }
 
