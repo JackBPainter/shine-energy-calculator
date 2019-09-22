@@ -1,32 +1,41 @@
-import React from 'react';
-import CalculateUsedUnits from './CalculateUsedUnits.js';
+import React, { useState } from 'react';
+import CalculateGasUnits from './CalculateGasUnits.js'
 
 export default function GasBox() {
-    let gasInput = 0;
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        gasInput = document.getElementById('Gas Meter').value;
-    }
-        return (
+    const [gasInput, setGasInput] = useState('');
+    const [gasAmount, setGasAmount] = useState(0);
+
+    const handleChangeOnGas = e => {
+        setGasInput(e.target.value);
+    };
+    const handleGasClick = e => {
+        e.preventDefault();
+        setGasAmount(gasInput);
+    };
+    return (
         <form>
             <div>
-            <label>Gas meter reading</label>
-            <input 
-                className = ""
-                type = "number"
-                id = "Gas Meter"
-                min = "11000"
-                placeholder = "11000"
-            />
+                <label>Gas meter reading</label>
+                <input
+                    className=""
+                    type="number"
+                    id="Gas Meter"
+                    min="11000"
+                    value={gasInput}
+                    placeholder="11000"
+                    onChange={handleChangeOnGas}
+                />
             </div>
-            <button type="submit"onSubmit={(event) => handleSubmit(event)}>Calculate gas cost</button>
+            <button onClick={handleGasClick}>Calculate gas cost</button>
             <div>
-                <label>Your Gas bill £{<CalculateUsedUnits gasReading={gasInput}/>}</label>
+                {gasAmount ? (
+                    <label>Your Gas bill £{<CalculateGasUnits gasReading={gasAmount} />}</label>)
+                    : <> </>}
             </div>
         </form>
-        
-            
-        
+
+
+
     );
 }
 
