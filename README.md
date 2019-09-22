@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Intro
+This is a electricity & gas calculator built for an extreme programming task (5 hours), which works out the cost for additional units used. The minimum amount of units you can input is 11000 based on the assumption that this is the previous meter reading.  The calculator charges the first 100 units (up to 11100) at 10p per unit and every unit beyond this is charged at 20p per unit
+
+## Sample calculation below for gas
+Gas meter reading entered => 11400
+Gas units used => 11400 - 11000 => 400
+Gas bill amount => (100 * 10) + (300 * 20) => 7000p (£70)
+
 ## Available Scripts
 
 In the project directory, you can run:
