@@ -16,6 +16,7 @@ export default function GasBox() {
         <form>
             <div>
                 <label>Gas meter reading</label>
+                <br />
                 <input
                     className=""
                     type="number"
@@ -29,7 +30,7 @@ export default function GasBox() {
             <button onClick={handleGasClick}>Calculate gas cost</button>
             <div>
                 {gasAmount ? (
-                    <label>Your Gas bill £{<CalculateGasUnits gasReading={gasAmount} />}</label>)
+                    <label>Your Gas bill {<CalculateGasUnits gasReading={gasAmount} />}</label>)
                     : <> </>}
             </div>
         </form>

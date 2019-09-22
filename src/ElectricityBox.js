@@ -14,13 +14,11 @@ export default function ElectricityBox() {
         setElectricityAmount(elecInput);
       };
 
-      
-
-     
         return (
         <form>
             <div>
             <label>Electricity meter reading</label>
+            <br />
             <input 
                 type = "number"
                 id = "Electricity Meter"
@@ -32,8 +30,9 @@ export default function ElectricityBox() {
             </div>
             <button onClick ={handleElectricityClick} > Calculate electricity cost</button>
             <div>
+                <br />
             {electricityAmount ?(
-                <label>Your Electricity bill £{<CalculateEleUnits elec = {electricityAmount} />} </label>)
+                <label>Your Electricity bill {<CalculateEleUnits elec={electricityAmount} />} </label>)
                 : <> </>}
             </div> 
         </form>

@@ -1,7 +1,63 @@
 * {
+  font-family: serif;
+}
+
+.App {
   background-color: lightblue;
+  height: 100.2vh;
 }
 
 .App {
   text-align: center;
+}
+
+h1 {
+  text-shadow: 1px 1px 1px blue;
+  padding: 0;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+label {
+  font-size: 1.5em;
+}
+
+input {
+  background: white;
+  font-size: 1em;
+  padding: 4px 4px;
+  border-radius: 4px;
+}
+
+button {
+  background: white;
+  font-size: 1em;
+  padding: 4px 4px;
+  border-radius: 4px;
+}
+
+.calculation-container {
+  display: flex;
+  justify-content: center;
+}
+
+.calculation {
+  background: rgb(250, 249, 254);
+  width: 50vw;
+  height: 72vh;
+}
+
+.Gas-Logo {
+  padding-top: 0.5em;
+  width: 4em;
+  height: 4em;
+}
+
+.Elec-Logo {
+  width: 4.5em;
+  height: 4.5em;
+}
+
+p {
+  padding-top: 8vh;
 }

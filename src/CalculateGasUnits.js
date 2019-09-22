@@ -9,5 +9,5 @@ export default function CalculateUsedUnits(props) {
     } else {
         bill = (ans -100) * .20 + 10;
     }
-    return ( <> ${bill} </>);
+    return ( <> £{bill} </>);
 }
